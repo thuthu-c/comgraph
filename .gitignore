@@ -1,2 +1,5 @@
 rust/target
 .idea/
+.vscode/
+**.exe
+**.out

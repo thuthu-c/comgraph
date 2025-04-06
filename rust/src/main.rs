@@ -6,7 +6,7 @@ mod utils;
 
 use crate::first_task::create_gradient;
 use crate::types::Params;
-use std::io::{stdin};
+use std::io::stdin;
 use crate::second_task::create_interpolation;
 
 fn main() {
@@ -18,6 +18,7 @@ fn main() {
         _ => panic!("Can't do this")
     }
 }
+
 fn input_parameters() -> (i32, Params) {
     println!(
         "Choose the task you want to run:\n\
