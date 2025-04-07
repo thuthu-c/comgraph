@@ -3,3 +3,4 @@ rust/target
 .vscode/
 **.exe
 **.out
+**/build

@@ -1,15 +1,15 @@
-#include <string>
+#include <vector>
+#include "math_operators.hpp"
 
-struct CropWindow {
-    int x0;
-    int x1;
-    int y0;
-    int y1;
+#pragma once
+
+class Film {
+    public:
+        std::vector<std::vector<Color24>> roll;
 };
 
-struct RunningOptions {
-    std::string input_scene_file;
-    std::string output_file;
-    CropWindow cropWindow;
-    bool quick;
+class Background {
+    public:
+        std::vector<std::vector<Color24>> background;
+        Color24 get_color_from_coordinates(Point2 coordinates);
 };

@@ -1,6 +1,5 @@
-#include "rt3.hpp"
+#include "cli.hpp"
 
-#include <iostream>
 #include <vector>
 #include <stdexcept>
 
@@ -42,9 +41,16 @@ RunningOptions parse_args(int argc, char* argv[]) {
             std::string outfile = args[idx + 1];
             ++idx;
         } else {
-            throw std::runtime_error("No valid option");
+            if (!options.input_scene_file.empty())
+                throw std::runtime_error("Unexpected number of arguments");
+
+            options.input_scene_file = arg;
         }
 
         ++idx;
     }
+    std::cout << std::endl;
+    // std::cout << options << std::endl;
+
+    return options;
 }
